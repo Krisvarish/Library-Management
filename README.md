@@ -3,7 +3,6 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![CSV](https://img.shields.io/badge/Data-CSV-green.svg)](https://docs.python.org/3/library/csv.html)
 [![OOP](https://img.shields.io/badge/Programming-OOP-orange.svg)](https://docs.python.org/3/tutorial/classes.html)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 A comprehensive Library Management System built with Python that streamlines library operations through efficient book management, user registration, and borrowing/returning processes. This project utilizes Object-Oriented Programming (OOP) principles to simulate real-world library operations including adding books, registering users, borrowing and returning books, and searching for books by their title.
 
@@ -315,10 +314,6 @@ library.issue_book('user123', '978-0123456789')
 # Return a book
 library.return_book('user123', '978-0123456789')
 ```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Author
 
