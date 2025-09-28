@@ -53,7 +53,7 @@ Library-Management/
 
 1. **Clone or Extract the Project**
    ```bash
-   git clone https://github.com/Krisvarish/Library-Management
+   git clone https://github.com/Krisvarish/Library-Management.git
    cd Library-Management
    ```
 
