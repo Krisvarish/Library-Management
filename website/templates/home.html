@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+
+h1 {
+    font-family: serif;
+    color: transparent;
+    text-align: center;
+    animation: effect 2s linear infinite;
+}
+
+h2{
+    background: url("/static/libpic.jpg");
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition-duration: 1s;
+}
+
+h2:hover {
+        letter-spacing: 10px;
+      }
+
+.image{
+    padding-top: 10px;
+    padding-left: 0%;
+    float: left;
+}
+
+h4{
+    font-size: 5em;
+    font-family: serif;
+    color: transparent;
+    text-align: center;
+    animation: effect 2s linear infinite;
+}
+
+@keyframes effect {
+        0% {
+            background: linear-gradient(
+                #008000, #3B2F2F);
+            -webkit-background-clip: text;
+        }
+ 
+        100% {
+            background: linear-gradient(
+                #FBB917, #FFA500);
+            -webkit-background-clip: text;
+        }
+    }
+
+
+</style>
+<div class="contain">
+    <div class="image">
+        <img src="/static/logo.png" width="55px" height="80px" >
+    </div>
+    <h1 style="font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: center; padding-top: 30px; text-align: center; padding-right: 0%; padding-left: 0%; color: #000FFF;">Sreevatsa Viswanathan Vivekananda Vidyalaya Senior Secondary School</h2>
+    <h3 style="font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: center; padding-top: 0%; padding-left: 30px;">Unit of Vivekananda Educational Society (Regd.)</h3>
+    <h2 style="font-size: 120px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: center; font-weight: 1000; padding-top: 120px;">E - LIBRARY</h2>
+    <h4 style="font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: center; padding-top: 200px; text-align: center;">A reader lives a thousand lives before he dies...</h4>
+</div>
+
+
+{% endblock %}

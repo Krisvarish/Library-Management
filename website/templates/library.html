@@ -1,0 +1,39 @@
+{% extends "libase.html" %} {% block title %}Library{% endblock %}
+
+{% block content %}
+
+<h1 style="font-size: 55px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: left; margin:0%; padding-left: 0%; padding-top: 10px;"><u>Welcome back</u> ,  <u>{{ username }}</u></h1>
+
+
+<form method="POST" action="/search">
+    <div class="search" style="display:inline-block; align-items:center; font-size: 30px; padding-top: 40px; padding-left: 400px;">
+        <input type="text"
+            placeholder="Search"
+            name="search">
+        <button>
+            <i class="fa fa-search"
+                style="font-size: 20px; align-items: center;">
+            </i>
+        </button>
+    </div>
+</form>
+{% if 'search' in session %}
+ <ul>
+    {% if books != [] %}
+        {% for book in books %}
+            {% if book[6] == 'available' %}
+                <li style="font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: left; margin:0%; padding-top: 20px;"> 
+                    <form method="POST" action="/lend" bg-color = "green">
+                        <u>Book Name</u>: {{ book[1] }}  --  <u>Author</u>: {{ book[2] }}  --  <u>Genre</u>: {{ book[3] }}  --  <u>Shelf No.</u>: {{ book[4] }} --- 
+                        <button value = '{{ book[1] }}' name = "lend" >Lend</button>
+                    </form> 
+                </li>
+            {% endif %}
+        {% endfor %}
+    {% elif search not in session %}
+        <h1 style="font-size: 60px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: center; padding-top: 110px;">Book not available...</h1>
+    {% endif %}
+ </ul>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,8 @@
+sno,Bname,Author,Genre,shelf,price,status,name,date
+1,Harry potter and the philosopher's stone,J.K. Rowling,Fantasy,4,500,available,,
+2,Giver,Lois Lowry,Fantasy,4,600,available,,
+3,The bullet that missed,Richard Osman,Mystery,6,700,NA,Keshav,2023-01-29 11:19:31.963848
+4,To kill a mockingbird,Harper Lee,Thriller,8,400,available,,
+5,Time machine,H.G. wells,Sci-fi,3,500,available,,
+6,Harry potter and the chamber of secrets,J.K. Rowling,Fantasy,4,500,available,,
+7,Python crash course,Eric Matthes,Education,5,500,NA,Shanmugavalli,2023-01-29 11:20:30.605040

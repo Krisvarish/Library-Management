@@ -1,0 +1,26 @@
+{% extends "chebase.html" %} {% block title %}Library{% endblock %}
+{% block content %}
+{% if 'search' in session %}
+<h1 style="font-size: 55px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: center; margin:0%; padding-top: 10px;">Books to be returned</h1>
+ <ul>
+    {% for b in bot %}
+        {% if b[7] in st %}
+            <li style="font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; padding-top: 13px ">
+                <form method="POST" action="/boinle">
+                    <u>Book</u>: {{ b[1] }}  --  <u>Student Name</u>: {{ b[7] }}  --  <u>Class</u>: {{ cla[b[7]] }}  --  <u>Date</u>: {{ b[8][:11] }}  ---
+                    <button value = '{{ b[1]}}' name = "given">Returned</button>
+                </form> 
+            </li>
+        {% else %}
+            <li style="font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; padding-top: 15px ">
+                <form method="POST" action="/boinle">
+                    <u>Book</u>: {{ b[1] }}  --  <u>Teacher Name</u>: {{ b[7] }}  --  <u>Date</u>: {{ b[8][:11] }}  ---  
+                    <button value = '{{ b[1]}}' name = "given">Returned</button>
+                </form> 
+            </li>
+        {% endif %}
+    {% endfor %}
+ </ul>
+{% endif %}
+
+{% endblock %}

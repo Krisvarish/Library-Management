@@ -1,0 +1,16 @@
+{% extends "changebase.html" %} {% block title %}Library{% endblock %}
+{% block content %}
+<h1 style="font-size: 55px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align: left; margin:0%; padding-top: 10px;"><u>Welcome back</u> ,  <u>Librarian</u></h1>
+<h2 style="font-size: 47px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align-last: center; font-weight: bold; padding-top: 20px;">Books available</h2>
+    {% if 'username' in session %}
+    <ul style="padding-top: 5px; font-size: 50px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align-last: center;" >
+        {% for bo in boo %}
+            {% if bo[6] == 'available' %}
+            <li style="padding-top: 10px; font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; text-align-last: left; justify-content: center;">
+                <u>Book Name</u>: {{ bo[1] }}  --  <u>Author</u>: {{ bo[2] }}  --  <u>Genre</u>: {{ bo[3] }}  --  <u>Shelf No.</u>: {{ bo[4] }}  --  <u>Price</u>: {{ bo[5] }}
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endblock %}
